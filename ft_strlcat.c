@@ -6,7 +6,7 @@
 /*   By: mvanwyk <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/05/15 15:14:47 by mvanwyk           #+#    #+#             */
-/*   Updated: 2016/05/15 16:38:20 by mvanwyk          ###   ########.fr       */
+/*   Updated: 2016/05/31 17:16:58 by mvanwyk          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,7 +26,7 @@ size_t	ft_strlcat(char *dst, char *src, size_t size)
 	while (dst[cnt] && cnt < size)
 		cnt++;
 	dlen = cnt;
-	while (s[cnt - dlen] && cnt < size)	//-1
+	while (s[cnt - dlen] && cnt < size)
 	{
 		d[cnt] = s[cnt - dlen];
 		cnt++;

@@ -15,11 +15,20 @@
 char	*ft_strmap(char const *s, char (*f)(char))
 {
 	char	*str;
+	int		cnt;
+	int		scnt;
 
+	cnt = 0;
+	scnt = 0;
 	if (!s || !f)
-		return (0);
-	str = (char *)malloc(sizeof(char *) * ft_strlen(s));
-	while (*s)
-		*str++ = f(*s);
+		return (NULL);
+	str = (char *)malloc(sizeof(char *) * ft_strlen(s) + 1);
+	while (s[cnt] != '\0')
+	{
+		str[scnt] = f((int)s[cnt]);
+		cnt++;
+		scnt++;
+	}
+	str[scnt] = '\0';
 	return (str);
 }

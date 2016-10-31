@@ -10,12 +10,18 @@
 /*                                                                            */
 /* ************************************************************************** */
 
+/*
+**	Lexicographically compares two strings.
+**	Returns 1 if strings are identical, returns
+**	0 if they are not.
+*/
+
 int		ft_strequ(char const *s1, char const *s2)
 {
 	int		cnt;
 
 	cnt = 0;
-	while (s1[cnt])
+	while (s1[cnt] != 0 && s2[cnt] != 0)
 	{
 		if (s1[cnt] != s2[cnt])
 			return (0);

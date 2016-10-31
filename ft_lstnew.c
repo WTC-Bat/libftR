@@ -1,37 +1,37 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strjoin.c                                       :+:      :+:    :+:   */
+/*   ft_lstnew.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: mvanwyk <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2016/05/15 15:18:31 by mvanwyk           #+#    #+#             */
-/*   Updated: 2016/05/15 15:24:29 by mvanwyk          ###   ########.fr       */
+/*   Created: 2016/08/09 14:22:57 by mvanwyk           #+#    #+#             */
+/*   Updated: 2016/08/09 14:22:58 by mvanwyk          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-char	*ft_strjoin(char const *s1, char const *s2)
+t_list	*ft_lstnew(void const *content, size_t content_size)
 {
-	size_t	cnt;
-	size_t	scnt;
-	char	*str;
-	size_t	len1;
-	size_t	len2;
+	t_list	*lst;
 
-	cnt = 0;
-	scnt = 0;
-	len1 = ft_strlen(s1);
-	len2 = ft_strlen(s2);
-	str = (char *)malloc(sizeof(char) * (len1 + len2 + 1));
-	if (str == NULL)
+	lst = (t_list *)malloc(sizeof(t_list));
+	if (!lst)
 		return (NULL);
-	while (scnt < len1)
-		str[cnt++] = s1[scnt++];
-	scnt = 0;
-	while (scnt < len2)
-		str[cnt++] = s2[scnt++];
-	str[cnt] = '\0';
-	return (str);
+	if (content == NULL)
+	{
+		lst->content = NULL;
+		lst->content_size = 0;
+	}
+	else
+	{
+		lst->content = (void *)malloc(sizeof(content));
+		if (lst->content == NULL)
+			return (NULL);
+		ft_memcpy(lst->content, content, content_size);
+		lst->content_size = content_size;
+	}
+	lst->next = NULL;
+	return (lst);
 }

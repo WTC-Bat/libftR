@@ -19,12 +19,13 @@ char	*ft_strmapi(char const *s, char (*f)(unsigned int, char))
 
 	if (!s || !f)
 		return (0);
-	str = (char *)malloc(sizeof(char *) * ft_strlen(s));
+	str = (char *)malloc(sizeof(char *) * ft_strlen(s) + 1);
 	cnt = 0;
 	while (s[cnt])
 	{
-		str[cnt] = f(cnt, s[cnt]);
+		str[cnt] = f((unsigned int)cnt, s[cnt]);
 		cnt++;
 	}
+	str[cnt] = '\0';
 	return (str);
 }

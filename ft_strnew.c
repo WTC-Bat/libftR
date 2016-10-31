@@ -12,6 +12,12 @@
 
 #include "libft.h"
 
+/*
+**	Allocates a memory area for a new string (char *).
+**	Performs null-termination, only the amount of characters
+**	in the string need be supplied.
+*/
+
 char	*ft_strnew(size_t size)
 {
 	char	*newstr;
@@ -28,6 +34,6 @@ char	*ft_strnew(size_t size)
 		}
 	}
 	else
-		return (0);
+		return (NULL);
 	return (newstr);
 }
