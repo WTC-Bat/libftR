@@ -225,6 +225,95 @@ static void	test_ft_isprint(void)
 	printf("st_isdigit (%c): %d\n\n", ch3, st3);
 }
 
+static void	test_ft_itoa(void)
+{
+	int		i1;
+	int		i2;
+	int		i3;
+	int		i4;
+	char	*ft1;
+	// char	*st1;
+	char	*ft2;
+	// char	*st2;
+	char	*ft3;
+	// char	*st3;
+	char	*ft4;
+	// char	*st4;
+
+	i1 = 2147483647;
+	i2 = -2147483648;
+	i3 = 42;
+	i4 = -42;
+	ft1 = ft_itoa(i1);
+	// st1 = itoa(i1);
+	ft2 = ft_itoa(i2);
+	// st2 = itoa(i2);
+	ft3 = ft_itoa(i3);
+	// st3 = itoa(i3);
+	ft4 = ft_itoa(i4);
+	// st4 = itoa(i4);
+	printf("itoa:\n");
+	printf("ft_itoa: %s\n", ft1);
+	// printf("st_itoa: %s\n", st1);
+	printf("ft_itoa: %s\n", ft2);
+	// printf("st_itoa: %s\n", st2);
+	printf("ft_itoa: %s\n", ft3);
+	// printf("st_itoa: %s\n", st3);
+	printf("ft_itoa: %s\n\n", ft4);
+	// printf("st_itoa: %s\n\n", st4);
+}
+
+static void	test_ft_memset(void)
+{
+	char	*ftmem;
+	char	*stmem;
+
+	// stmem = malloc(sizeof(char) * 16);
+	ftmem = malloc(sizeof(char) * 16);
+	// memset(stmem, 'I', 16);
+	// stmem[strlen(stmem)] = '\0';	//To ensure ftmem and stmem don't overlap?
+	ft_memset(ftmem, 'I', 16);
+	ftmem[strlen(ftmem)] = '\0';
+	printf("memset:\n");
+	printf("ft_memset ('I', 16): %s\n\n", ftmem);
+	// printf("st_memset: %s\n\n", stmem);
+}
+
+static void	test_ft_memcpy(void)
+{
+	char	*src = "An Area Of Memory";
+	void	*ftdst;
+	void	*stdst;
+
+	// src = "An Area Of Memory";
+	ftdst = malloc(sizeof(char) * 18);
+	stdst = malloc(sizeof(char) * 18);
+	ftdst = ft_memcpy(ftdst, src, 14);
+	stdst = memcpy(stdst, src, 14);
+	printf("memcpy: (src - \"An Area Of Memory\")\n");
+	printf("ft_memcpy: %s\n", (char *)ftdst);
+	printf("st_memcpy: %s\n\n", (char *)stdst);
+}
+
+// static void	test_ft_memalloc(void)
+// {
+// 	char	*str;
+// 	char	*tst;
+// 	int		cnt;
+//
+// 	cnt = 0;
+// 	tst = "TheFattestOfBats";
+// 	str = ft_memalloc(17);
+//
+// 	while (tst[cnt] != '\0')
+// 	{
+// 		str[cnt] = tst[cnt];
+// 		cnt++;
+// 	}
+// 	printf("memalloc:\n");
+// 	printf("ft_memalloc: %s\n\n", str);
+// }
+
 int			main(int argc, char **argv)
 {
 	test_ft_atoi();
@@ -234,5 +323,9 @@ int			main(int argc, char **argv)
 	test_ft_isascii();
 	test_ft_isdigit();
 	test_ft_isprint();
+	test_ft_itoa();
+	test_ft_memset();
+	test_ft_memcpy();
+	// test_ft_memalloc();
 	return (0);
 }
