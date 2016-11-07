@@ -397,6 +397,21 @@ static void	test_ft_strncpy(void)
 	printf("st_strncpy: %s\n\n", ststr);
 }
 
+static void	test_ft_strcat(void)
+{
+	char	*str = "Bat";
+	char	*ftstr;
+	char	*ststr;
+
+	ftstr = strdup("I Am ");
+	ststr = strdup("I Am ");
+	ft_strcat(ftstr, str);
+	strcat(ststr, str);
+	printf("strcat: (\"I Am \" + \"Bat\")\n");
+	printf("ft_strcat: %s\n", ftstr);
+	printf("st_strcat: %s\n\n", ststr);
+}
+
 int			main(int argc, char **argv)
 {
 	test_ft_atoi();
@@ -415,5 +430,6 @@ int			main(int argc, char **argv)
 	test_ft_strdup();
 	test_ft_strcpy();
 	test_ft_strncpy();
+	test_ft_strcat();
 	return (0);
 }
