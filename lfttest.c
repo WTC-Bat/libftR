@@ -195,6 +195,36 @@ static void	test_ft_isdigit(void)
 	printf("st_isdigit (%c): %d\n\n", ch2, st2);
 }
 
+static void	test_ft_isprint(void)
+{
+	char	ch1;
+	char	ch2;
+	char	ch3;
+	int		ft1;
+	int		st1;
+	int		ft2;
+	int		st2;
+	int		ft3;
+	int		st3;
+
+	ch1 = '~';
+	ch2 = 'A';
+	ch3 = ' ';
+	ft1 = ft_isprint(ch1);
+	st1 = ft_isprint(ch1);
+	ft2 = ft_isprint(ch2);
+	st2 = ft_isprint(ch2);
+	ft3 = ft_isprint(ch3);
+	st3 = ft_isprint(ch3);
+	printf("isdigit:\n");
+	printf("ft_isdigit (%c): %d\n", ch1, ft1);
+	printf("st_isdigit (%c): %d\n", ch1, st1);
+	printf("ft_isdigit (%c): %d\n", ch2, ft2);
+	printf("st_isdigit (%c): %d\n", ch2, st2);
+	printf("ft_isdigit (%c): %d\n", ch3, ft3);
+	printf("st_isdigit (%c): %d\n\n", ch3, st3);
+}
+
 int			main(int argc, char **argv)
 {
 	test_ft_atoi();
@@ -203,5 +233,6 @@ int			main(int argc, char **argv)
 	test_ft_isalpha();
 	test_ft_isascii();
 	test_ft_isdigit();
+	test_ft_isprint();
 	return (0);
 }
