@@ -268,15 +268,18 @@ static void	test_ft_memset(void)
 	char	*ftmem;
 	char	*stmem;
 
-	// stmem = malloc(sizeof(char) * 16);
 	ftmem = malloc(sizeof(char) * 16);
-	// memset(stmem, 'I', 16);
-	// stmem[strlen(stmem)] = '\0';	//To ensure ftmem and stmem don't overlap?
 	ft_memset(ftmem, 'I', 16);
 	ftmem[strlen(ftmem)] = '\0';
 	printf("memset:\n");
-	printf("ft_memset ('I', 16): %s\n\n", ftmem);
-	// printf("st_memset: %s\n\n", stmem);
+	printf("ft_memset ('I', 16): %s\n", ftmem);
+	free(ftmem);
+
+	stmem = malloc(sizeof(char) * 16);
+	memset(stmem, 'I', 16);
+	stmem[strlen(stmem)] = '\0';	//To ensure ftmem and stmem don't overlap?
+	printf("st_memset ('I', 16): %s\n\n", stmem);
+	free(stmem);
 }
 
 static void	test_ft_memcpy(void)
@@ -285,7 +288,6 @@ static void	test_ft_memcpy(void)
 	void	*ftdst;
 	void	*stdst;
 
-	// src = "An Area Of Memory";
 	ftdst = malloc(sizeof(char) * 18);
 	stdst = malloc(sizeof(char) * 18);
 	ftdst = ft_memcpy(ftdst, src, 14);
@@ -293,7 +295,34 @@ static void	test_ft_memcpy(void)
 	printf("memcpy: (src - \"An Area Of Memory\")\n");
 	printf("ft_memcpy: %s\n", (char *)ftdst);
 	printf("st_memcpy: %s\n\n", (char *)stdst);
+	free(ftdst);
+	ftdst = NULL;
+	stdst = NULL;
+	free(stdst);
 }
+
+static void	test_ft_memccpy(void)
+{
+	char	*src = "Some Memory To Copy";
+	char	*ftdst;
+	char	*stdst;
+
+	ftdst = (char *)malloc(sizeof(char) * 32);
+	ftdst = (char *)ft_memccpy(ftdst, src, ' ', 19);
+	printf("memccpy: (src = \"Some Memory To Copy\")\n");
+	printf("ft_memccpy: (%s)\n\n", ftdst);
+	// free(ftdst);
+
+	// stdst = (char *)malloc(sizeof(char) * 32);
+	// stdst = (char *)memccpy(stdst, src, ' ', 5);
+	// printf("st_memccpy: (%s)\n\n", stdst);
+	// free(stdst);
+}
+
+// static void	test_if_memmove(void)
+// {
+//
+// }
 
 // static void	test_ft_memalloc(void)
 // {
@@ -326,6 +355,7 @@ int			main(int argc, char **argv)
 	test_ft_itoa();
 	test_ft_memset();
 	test_ft_memcpy();
+	test_ft_memccpy();
 	// test_ft_memalloc();
 	return (0);
 }
