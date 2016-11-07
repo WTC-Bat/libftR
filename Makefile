@@ -4,7 +4,7 @@ FLAGS = -Wall -Wextra -Werror
 OPTIONS = -c -I "./"
 SRCS = ./ft_itoa.c ./ft_strcat.c ./ft_strchr.c ./ft_strcmp.c ./ft_strcpy.c \
 		./ft_strdup.c ./ft_strjoin.c ./ft_strmap.c ./ft_strmapi.c \
-		./ft_strncat.c ./ft_strncmp.c ./ft_strcpy.c ./ft_strnew.c \
+		./ft_strncat.c ./ft_strncmp.c ./ft_strncpy.c ./ft_strnew.c \
 		./ft_strnstr.c ./ft_strrchr.c ./ft_strsplit.c ./ft_strstr.c \
 		./ft_strsub.c ./ft_strtrim.c ./ft_tolower.c ./ft_toupper.c \
 		./ft_atoi.c ./ft_isalnum.c ./ft_isalpha.c ./ft_isascii.c \
@@ -14,11 +14,11 @@ SRCS = ./ft_itoa.c ./ft_strcat.c ./ft_strchr.c ./ft_strcmp.c ./ft_strcpy.c \
 		./ft_memdel.c ./ft_memmove.c ./ft_memset.c ./ft_putchar.c \
 		./ft_putchar_fd.c ./ft_putendl.c ./ft_putendl_fd.c \
 		./ft_putnbr.c ./ft_putnbr_fd.c ./ft_putstr.c ./ft_putstr_fd.c \
-		./ft_strclr.c ./ft_strdel.c ./ft_striter.c ./ft_striteri.c 
+		./ft_strclr.c ./ft_strdel.c ./ft_striter.c ./ft_striteri.c
 
 OBJS = ./ft_itoa.o ./ft_strcat.o ./ft_strchr.o ./ft_strcmp.o ./ft_strcpy.o \
 		./ft_strdup.o ./ft_strjoin.o ./ft_strmap.o ./ft_strmapi.o \
-		./ft_strncat.o ./ft_strncmp.o ./ft_strcpy.o ./ft_strnew.o \
+		./ft_strncat.o ./ft_strncmp.o ./ft_strncpy.o ./ft_strnew.o \
 		./ft_strnstr.o ./ft_strrchr.o ./ft_strsplit.o ./ft_strstr.o \
 		./ft_strsub.o ./ft_strtrim.o ./ft_tolower.o ./ft_toupper.o \
 		./ft_atoi.o ./ft_isalnum.o	./ft_isalpha.o ./ft_isascii.o \

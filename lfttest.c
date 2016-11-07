@@ -343,6 +343,60 @@ static void	test_ft_memccpy(void)
 // 	printf("ft_memalloc: %s\n\n", str);
 // }
 
+static void	test_ft_strlen(void)
+{
+	char	*str = "12345";
+	int		fti;
+	int		sti;
+
+	fti = ft_strlen(str);
+	sti = strlen(str);
+	printf("strlen (\"12345\"):\n");
+	printf("ft_strlen: %d\n", fti);
+	printf("st_strlen: %d\n\n", sti);
+}
+
+static void	test_ft_strdup(void)
+{
+	char	*str = "Cheese And Crackers";
+	char	*ftstr;
+	char	*ststr;
+
+	ftstr = ft_strdup(str);
+	ststr = strdup(str);
+	printf("strdup: (str = \"Cheese And Crackers\")\n");
+	printf("ft_strdup: %s\n", ftstr);
+	printf("st_strdup: %s\n\n", ststr);
+}
+
+static void	test_ft_strcpy(void)
+{
+	char	*str = "A String To Copy";
+	char	*ftstr;
+	char	*ststr;
+
+	ft_strcpy(ftstr, str);
+	strcpy(ststr, str);
+	printf("strcpy: (str = \"A String To Copy\")\n");
+	printf("ft_strcpy: %s\n", ftstr);
+	printf("st_strcpy: %s\n\n", ststr);
+}
+
+static void	test_ft_strncpy(void)
+{
+	char	*str = "A String To Copy";
+	char	*ftstr;
+	char	*ststr;
+
+	ftstr = (char *)malloc(sizeof(char) * 8);
+	ststr = (char *)malloc(sizeof(char) * 8);
+	ft_strncpy(ftstr, str,  8);
+	strncpy(ststr, str, 8);
+	printf("strncpy: (str = \"A String To Copy\")\n");
+	printf("ft_strncpy: %s\n", ftstr);
+	printf("st_strncpy: %s\n\n", ststr);
+}
+
 int			main(int argc, char **argv)
 {
 	test_ft_atoi();
@@ -357,5 +411,9 @@ int			main(int argc, char **argv)
 	test_ft_memcpy();
 	test_ft_memccpy();
 	// test_ft_memalloc();
+	test_ft_strlen();
+	test_ft_strdup();
+	test_ft_strcpy();
+	test_ft_strncpy();
 	return (0);
 }
