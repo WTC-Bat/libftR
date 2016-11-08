@@ -3,3 +3,4 @@ cats.c
 libft.a
 *DS_Store
 ._*
+*.o
