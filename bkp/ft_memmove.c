@@ -1,26 +1,41 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strcmp.c                                        :+:      :+:    :+:   */
+/*   ft_memmove.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: mvanwyk <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2016/05/09 10:22:47 by mvanwyk           #+#    #+#             */
-/*   Updated: 2016/05/09 10:22:50 by mvanwyk          ###   ########.fr       */
+/*   Created: 2016/05/10 13:55:44 by mvanwyk           #+#    #+#             */
+/*   Updated: 2016/05/10 15:47:26 by mvanwyk          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-int		ft_strcmp(char *s1, char *s2)
+#include "libft.h"
+
+void	*ft_memmove(void *dst, void *src, size_t len)
 {
-	while (*s1 == *s2)
+	unsigned char	*d;
+	unsigned char	*s;
+
+	d = (unsigned char *)dst;
+	s = (unsigned char *)src;
+	/*
+	42FileChecker doesn't like this if statement below. It expects the function
+	to crash
+	*/
+	if (!d || !s)
+		return (0);
+	if (d > s)
 	{
-		s1++;
-		s2++;
-		if (*s1 == '\0')
-			return (0);
+		d += len;
+		s += len;
+		while (len-- != 0)
+			*--d = *--s;
 	}
-	if (*(unsigned char *)s1 < *(unsigned char *)s2)
-		return (-1);
 	else
-		return (1);
+	{
+		while (len-- != 0)
+			*d++ = *s++;
+	}
+	return (dst);
 }

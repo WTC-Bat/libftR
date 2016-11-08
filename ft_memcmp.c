@@ -17,15 +17,39 @@ int		ft_memcmp(void *s1, void *s2, size_t n)
 	unsigned char	*s1_uc;
 	unsigned char	*s2_uc;
 
-	s1_uc = s1;
-	s2_uc = s2;
-	while (*s1_uc == *s2_uc)
+	s1_uc = (unsigned char *)s1;
+	s2_uc = (unsigned char *)s2;
+	while (n != 0)
 	{
-		if (n == 0)
-			return (0);
+		if (*s1_uc != *s2_uc)
+			return (s1_uc - s2_uc);
+			// if (s1_uc)
 		s1_uc++;
 		s2_uc++;
 		n--;
 	}
-	return (*s1_uc - *s2_uc);
+	return (0);
+
+
+	// unsigned char	*s1_uc;
+	// unsigned char	*s2_uc;
+
+	// s1_uc = s1;
+	// s2_uc = s2;
+	// s1_uc = (unsigned char *)s1;
+	// s2_uc = (unsigned char *)s2;
+	// while (*s1_uc == *s2_uc)
+	// {
+	// 	if (n == 0)
+	// 		return (0);
+	// 	s1_uc++;
+	// 	s2_uc++;
+	// 	n--;
+	// }
+	// return (*s1_uc - *s2_uc);
+
+	// if (*s1_uc < *s2_uc)
+	// 	return (-1);
+	// else
+	// 	return (1);
 }

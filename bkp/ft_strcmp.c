@@ -10,6 +10,7 @@
 /*                                                                            */
 /* ************************************************************************** */
 
+/*The difference between by amount, not just +1, -1 or 0*/
 int		ft_strcmp(char *s1, char *s2)
 {
 	while (*s1 == *s2)
@@ -19,8 +20,5 @@ int		ft_strcmp(char *s1, char *s2)
 		if (*s1 == '\0')
 			return (0);
 	}
-	if (*(unsigned char *)s1 < *(unsigned char *)s2)
-		return (-1);
-	else
-		return (1);
+	return (*s1 - *s2);
 }
