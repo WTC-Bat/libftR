@@ -4,16 +4,21 @@
 
 int		main(void)
 {
-	uint8_t	*s1 = (uint8_t *)"\xff\xaa\xde\xffMACOSX\xff";
-	uint8_t	*s2 = (uint8_t *)"\xff\xaa\xde\x02";
-	size_t	size = 8;
-	int		r1 = memcmp(s1, s2, size);
-	int		r2 = ft_memcmp(s1, s2, size);
-	printf("st_memcmp: %d", r1);
-	printf("ft_memcmp: %d", r2);
-	return (0);
+	
 
 
+	/*MEMCMP*/
+	// uint8_t	*s1 = (uint8_t *)"\xff\xaa\xde\xffMACOSX\xff";
+	// uint8_t	*s2 = (uint8_t *)"\xff\xaa\xde\x02";
+	// size_t	size = 8;
+	// int		r1 = memcmp(s1, s2, size);
+	// int		r2 = ft_memcmp(s1, s2, size);
+	// printf("st_memcmp: %d", r1);
+	// printf("ft_memcmp: %d", r2);
+	// return (0);
+
+
+	/*MEMCCPY*/
 	// char	src[] = "test basic du memccpy !";
 	// char	buff[22];
 	// char	buff2[22];
