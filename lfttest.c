@@ -412,6 +412,21 @@ static void	test_ft_strcat(void)
 	printf("st_strcat: %s\n\n", ststr);
 }
 
+static void	test_ft_strncat(void)
+{
+	char	*str = "Concatenation String";
+	char	*ftstr;
+	char	*ststr;
+
+	ftstr = strdup("Test ");
+	ststr = strdup("Test ");
+	ft_strncat(ftstr, str, 12);
+	strncat(ststr, str, 12);
+	printf("strncat: (str = \"Concatenation String\")\n");
+	printf("ft_strncat: %s\n", ftstr);
+	printf("st_strncat: %s\n", ststr);
+}
+
 int			main(int argc, char **argv)
 {
 	test_ft_atoi();
@@ -431,5 +446,6 @@ int			main(int argc, char **argv)
 	test_ft_strcpy();
 	test_ft_strncpy();
 	test_ft_strcat();
+	test_ft_strncat();
 	return (0);
 }
