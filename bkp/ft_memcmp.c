@@ -1,40 +1,34 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_memmove.c                                       :+:      :+:    :+:   */
+/*   ft_memcmp.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: mvanwyk <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2016/05/10 13:55:44 by mvanwyk           #+#    #+#             */
-/*   Updated: 2016/05/10 15:47:26 by mvanwyk          ###   ########.fr       */
+/*   Created: 2016/05/10 16:24:41 by mvanwyk           #+#    #+#             */
+/*   Updated: 2016/05/10 17:17:28 by mvanwyk          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void	*ft_memmove(void *dst, void *src, size_t len)
+int		ft_memcmp(void *s1, void *s2, size_t n)
 {
-	unsigned char	*d;
-	unsigned char	*s;
+	unsigned char	suc1;
+	unsigned char	suc2;
 
-	d = (unsigned char *)dst;
-	s = (unsigned char *)src;
 	/*	42FileChecker expects crash
 	**
-	if (!d || !s)
+	if (!s1 || !s2)
 		return (0);
 	*/
-	if (d > s)
+	while (n != 0)
 	{
-		d += len;
-		s += len;
-		while (len-- != 0)
-			*--d = *--s;
+		suc1 = *(unsigned char *)s1++;
+		suc2 = *(unsigned char *)s2++;
+		if (suc1 != suc2)
+			return (suc1 - suc2);
+		n--;
 	}
-	else
-	{
-		while (len-- != 0)
-			*d++ = *s++;
-	}
-	return (dst);
+	return (0);
 }
