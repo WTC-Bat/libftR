@@ -36,6 +36,7 @@ char	*ft_strstr(char *str, char *to_find)
 /*
 **	I'M SURE DOING THE "IF...ELSE" IN THE SECOND WHILE LOOP IS UNDESIRABLE
 **	THOUGH 42FILECHECKER SAYS IT'S OKAY
+**	SEEMS WRONG THOUGH
 */
 // char	*ft_strstr(char *str, char *to_find)
 // {
