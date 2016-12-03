@@ -12,10 +12,10 @@
 
 #include "libft.h"
 
-char	*ft_strncat(char *dest, char *src, int nb)
+char	*ft_strncat(char *dest, char *src, size_t nb)
 {
-	int		cnt;
-	int		len;
+	size_t		cnt;
+	size_t		len;
 
 	cnt = 0;
 	len = ft_strlen(dest);
@@ -27,3 +27,20 @@ char	*ft_strncat(char *dest, char *src, int nb)
 	dest[cnt + len] = '\0';
 	return (dest);
 }
+
+
+// char	*ft_strncat(char *dest, char *src, int nb)
+// {
+// 	int		cnt;
+// 	int		len;
+//
+// 	cnt = 0;
+// 	len = ft_strlen(dest);
+// 	while (cnt < nb)
+// 	{
+// 		dest[cnt + len] = src[cnt];
+// 		cnt++;
+// 	}
+// 	dest[cnt + len] = '\0';
+// 	return (dest);
+// }

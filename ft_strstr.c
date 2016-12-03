@@ -15,9 +15,11 @@ char	*ft_strstr(char *str, char *to_find)
 	int		cnt;
 	int		cnt2;
 
+	if (to_find[0] == '\0')
+		return (str);
 	cnt = 0;
 	cnt2 = 0;
-	while (str[cnt])
+	while (str[cnt] != '\0')
 	{
 		while (str[cnt2 + cnt] == to_find[cnt2])
 		{
@@ -30,3 +32,60 @@ char	*ft_strstr(char *str, char *to_find)
 	}
 	return (0);
 }
+
+/*
+**	I'M SURE DOING THE "IF...ELSE" IN THE SECOND WHILE LOOP IS UNDESIRABLE
+**	THOUGH 42FILECHECKER SAYS IT'S OKAY
+*/
+// char	*ft_strstr(char *str, char *to_find)
+// {
+// 	int		cnt;
+// 	int		cnt2;
+//
+// 	if (to_find[0] == '\0')
+// 		return (str);
+// 	cnt = 0;
+// 	cnt2 = 0;
+// 	while (str[cnt] != '\0')
+// 	{
+// 		while (str[cnt2 + cnt] == to_find[cnt2])
+// 		{
+// 			if (str[cnt2 + cnt] == to_find[cnt2])
+// 			{
+// 				cnt2++;
+// 				if (to_find[cnt2] == '\0')
+// 					return (&str[cnt]);
+// 			}
+// 			else
+// 			{
+// 				return (0);
+// 			}
+// 		}
+// 		cnt2 = 0;
+// 		cnt++;
+// 	}
+// 	return (0);
+// }
+
+// char	*ft_strstr(char *str, char *to_find)
+// {
+// 	int		cnt;
+// 	int		cnt2;
+//
+// 	if (to_find[0] == '\0')
+// 		return (str);
+// 	cnt = 0;
+// 	cnt2 = 0;
+// 	while (str[cnt] != '\0')
+// 	{
+// 		while (str[cnt2 + cnt] == to_find[cnt2])
+// 		{
+// 			cnt2++;
+// 			if (to_find[cnt2] == '\0')
+// 				return (&str[cnt]);
+// 		}
+// 		cnt2 = 0;
+// 		cnt++;
+// 	}
+// 	return (0);
+// }

@@ -29,5 +29,6 @@ size_t	ft_strlcat(char *dst, char *src, size_t size)
 		scnt++;
 	}
 	dst[dcnt] = '\0';
-	return (dlen + ft_strlen(src));
+	// return (dlen + ft_strlen(src));
+	return (dlen + ft_strlen(src) + size);
 }

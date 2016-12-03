@@ -1,5 +1,9 @@
+
 # libftR
 
-	- 42FileChecker - ToCheck:
-		- ft_memcmp
-		- ft_strstr
+	-	ft_strncpy
+		-	Not working with empty strings?
+	-	ft_strlcat
+		-	???
+	-	ft_strncat
+		-	Read to many bytes?

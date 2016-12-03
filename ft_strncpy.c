@@ -14,20 +14,29 @@
 
 char	*ft_strncpy(char *dest, char *src, size_t n)
 {
-	// size_t	cnt;
-	//
-	// if (ft_strlen(src))
-	// cnt = 0;
-
-
-
 	size_t	cnt;
 
 	cnt = 0;
 	while (cnt < n)
 	{
-		dest[cnt] = src[cnt];
+		if (src[cnt] != '\0')
+			dest[cnt] = src[cnt];
+		else
+			dest[cnt] = '\0';
 		cnt++;
 	}
 	return (dest);
 }
+
+// char	*ft_strncpy(char *dest, char *src, size_t n)
+// {
+// 	size_t	cnt;
+//
+// 	cnt = 0;
+// 	while (cnt < n)
+// 	{
+// 		dest[cnt] = src[cnt];
+// 		cnt++;
+// 	}
+// 	return (dest);
+// }
