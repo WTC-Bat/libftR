@@ -12,22 +12,40 @@
 
 #include "libft.h"
 
-char	*ft_strtrim(char const *s)
+static int	is_only_trim(char const *s)
+{
+	int		cnt;
+
+	cnt = 0;
+	while (s[cnt] != '\0')
+	{
+		if ((s[cnt] != '\t') && (s[cnt] != '\n') && (s[cnt] != ' '))
+			return (0);
+		cnt++;
+	}
+	return (1);
+}
+
+char		*ft_strtrim(char const *s)
 {
 	char	*str;
 	size_t	cnt;
 	size_t	start;
 	size_t	end;
 
+	if (s[0] == '\0')
+		return (ft_strdup(s));
 	start = 0;
 	cnt = 0;
 	end = ft_strlen(s) - 1;
-	str = (char *)malloc(sizeof(char) * end);
 	while (s[start] == ' ' || s[start] == '\n' || s[start] == '\t')
 		start++;
 	while (s[end] == ' ' || s[end] == '\n' || s[end] == '\t')
 		end--;
+	if ((str = (char *)malloc(sizeof(char) * (end - start + 2))) == NULL)
+		return (NULL);
 	while (start <= end)
 		str[cnt++] = s[start++];
+	str[cnt] = '\0';
 	return (str);
 }

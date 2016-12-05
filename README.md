@@ -7,6 +7,3 @@
 		-	???
 	-	ft_strncat
 		-	Read to many bytes?
-
-### Next:
--	ft_strnstr
