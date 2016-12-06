@@ -10,6 +10,10 @@
 /*                                                                            */
 /* ************************************************************************** */
 
+/*
+**	WORKING, BUT HAS EXCESS 'INT_MIN' CHECKS
+*/
+
 #include "libft.h"
 
 static size_t	get_len(int n)
@@ -21,6 +25,9 @@ static size_t	get_len(int n)
 		len++;
 	if (n == 0)
 		return (1);
+	// if (n == -2147483648)
+	if (n == (-2147483647 - 1))
+		return (11);
 	while (n != 0)
 	{
 		n = n / 10;
@@ -36,8 +43,17 @@ static int		set_nbr(int n)
 	nbr = 0;
 	if (n < 0)
 	{
-		nbr = n;
-		nbr = -nbr;
+		if (n == (-2147483647 - 1))
+		// if (n == -2147483648)
+		{
+			nbr = n + 1;
+			nbr = -nbr;
+		}
+		else
+		{
+			nbr = n;
+			nbr = -nbr;
+		}
 	}
 	else
 		nbr = n;
