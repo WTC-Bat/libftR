@@ -12,6 +12,20 @@
 
 #include "libft.h"
 
+// static int	is_only_trim(char const *s)
+// {
+// 	int		cnt;
+//
+// 	cnt = 0;
+// 	while (s[cnt] != '\0')
+// 	{
+// 		if ((s[cnt] != '\t') && (s[cnt] != '\n') && (s[cnt] != ' '))
+// 			return (0);
+// 		cnt++;
+// 	}
+// 	return (1);
+// }
+
 char		*ft_strtrim(char const *s)
 {
 	char	*str;
