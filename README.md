@@ -3,10 +3,32 @@
 
 	-	ft_strncpy
 		-	Not working with empty strings?
-	-	ft_strlcat
-		-	???
 	-	ft_strncat
 		-	Read to many bytes?
+	-	ft_strlcat
+		-	???
+	-	ft_strstr
+		-
+	-	ft_strncmp
+		-
+	-	ft_atoi
+		-
+	-	ft_toupper
+		-
+	-	ft_tolower
+		-
+	-	ft_memalloc
+		-
+	-	ft_strclr
+		-	protection
+	-	ft_striteri
+		-	protection
+	-	ft_strmap
+		-
+	-	ft_strmapi
+		-
+	-	ft_strsplit
+		-
 
 
 	-	ft_strtrim:
