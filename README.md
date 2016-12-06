@@ -7,3 +7,7 @@
 		-	???
 	-	ft_strncat
 		-	Read to many bytes?
+
+
+	-	ft_strtrim:
+		-	Works with 42FileChecker, but the means seem overly tedious
