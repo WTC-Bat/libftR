@@ -2,10 +2,6 @@
 # libftR
 
 	-	TODO:
-		-	ft_strnstr
-			-
-		-	ft_strncmp
-			-
 		-	ft_toupper
 			-
 		-	ft_tolower
