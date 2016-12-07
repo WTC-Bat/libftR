@@ -16,3 +16,10 @@
 		-	ft_toupper & ft_tolower
 			-	Both work, but 42FileChecker says they don't. I think 42FC
 				 expects unsigned values or some such.
+
+
+	-	Branches:
+		-	master:		all basic functions. Working.
+		-	bonus:		all basic and bonus functions. Working.
+		-	extra:		all basic and bonus functions with extra functions
+						 added. Working
