@@ -15,16 +15,6 @@
 		-
 	-	ft_tolower
 		-
-	-	ft_memalloc
-		-
-	-	ft_strclr
-		-	protection
-	-	ft_striteri
-		-	protection
-	-	ft_strmap
-		-
-	-	ft_strmapi
-		-
 	-	ft_strsplit
 		-
 
