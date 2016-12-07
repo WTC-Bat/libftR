@@ -10,8 +10,6 @@
 			-
 		-	ft_tolower
 			-
-		-	ft_strsplit
-			-
 
 	-	NOTES:
 		-	ft_strtrim:
