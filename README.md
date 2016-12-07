@@ -1,12 +1,5 @@
 
 # libftR
-
-	-	TODO:
-		-	ft_toupper
-			-
-		-	ft_tolower
-			-
-
 	-	NOTES:
 		-	ft_strtrim:
 			-	Works with 42FileChecker, but the means seem overly tedious
@@ -20,3 +13,6 @@
 			 most cases, this is a simple:
 			 if ('var' == NULL)
 			 	return (NULL);
+		-	ft_toupper & ft_tolower
+			-	Both work, but 42FileChecker says they don't. I think 42FC
+				 expects unsigned values or some such.
