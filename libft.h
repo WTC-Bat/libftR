@@ -21,7 +21,6 @@ char	*ft_strcat(char *dest, char *src);
 char	*ft_strchr(char *s, int c);
 char	*ft_strcmp(char *s1, char *s2);
 char	*ft_strcpy(char *dest, char *src);
-// char	*ft_strdup(char *str);
 char	*ft_strdup(char const *str);
 char	*ft_strjoin(char const *s1, char const *s2);
 char	*ft_strmap(char const *s, char (*f)(char));
