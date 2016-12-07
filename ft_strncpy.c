@@ -12,41 +12,23 @@
 
 #include "libft.h"
 
-// if (src[0] == '\0')
-// {
-// 	while (cnt < n)
-// 	{
-// 		dest[cnt] = '\0';
-// 		cnt++;
-// 	}
-// 	return (dest);
-// }
-
 char	*ft_strncpy(char *dest, char *src, size_t n)
 {
 	size_t	cnt;
 
 	cnt = 0;
-	while (cnt < n)
+	while (cnt < n && src[cnt] != '\0')
 	{
-		if ((src[cnt] == '\0') && (dest[cnt] == '\0') && (cnt < n))
-			dest[cnt] = '\0';
-		else if (src[cnt] != '\0')
-			dest[cnt] = src[cnt];
+		dest[cnt] = src[cnt];
 		cnt++;
+	}
+	if (cnt < n)
+	{
+		while (cnt < n)
+		{
+			dest[cnt] = '\0';
+			cnt++;
+		}
 	}
 	return (dest);
 }
-
-// char	*ft_strncpy(char *dest, char *src, size_t n)
-// {
-// 	size_t	cnt;
-//
-// 	cnt = 0;
-// 	while (cnt < n)
-// 	{
-// 		dest[cnt] = src[cnt];
-// 		cnt++;
-// 	}
-// 	return (dest);
-// }
