@@ -17,7 +17,8 @@ SRCS = ./ft_itoa.c ./ft_strcat.c ./ft_strchr.c ./ft_strcmp.c ./ft_strcpy.c \
 		./ft_strclr.c ./ft_strdel.c ./ft_striter.c ./ft_striteri.c \
 		./ft_lstnew.c ./ft_lstdel.c ./ft_lstdelone.c ./ft_lstadd.c \
 		./ft_lstiter.c ./ft_lstmap.c ./ft_indexof.c ./ft_lindexof.c \
-		./ft_startswith.c ./ft_endswith.c
+		./ft_startswith.c ./ft_endswith.c ./ft_strrev.c ./ft_splitcnt.c \
+		./ft_putnbr_endl.c
 
 OBJS = ./ft_itoa.o ./ft_strcat.o ./ft_strchr.o ./ft_strcmp.o ./ft_strcpy.o \
 		./ft_strdup.o ./ft_strjoin.o ./ft_strmap.o ./ft_strmapi.o \
@@ -34,7 +35,8 @@ OBJS = ./ft_itoa.o ./ft_strcat.o ./ft_strchr.o ./ft_strcmp.o ./ft_strcpy.o \
 		./ft_strclr.o ./ft_strdel.o ./ft_striter.o ./ft_striteri.o \
 		./ft_lstnew.o ./ft_lstdel.o ./ft_lstdelone.o ./ft_lstadd.o \
 		./ft_lstiter.o ./ft_lstmap.o ./ft_indexof.o ./ft_lindexof.o \
-		./ft_startswith.o ./ft_endswith.o
+		./ft_startswith.o ./ft_endswith.o ./ft_strrev.o ./ft_splitcnt.o \
+		./ft_putnbr_endl.o
 
 all: $(NAME)
 

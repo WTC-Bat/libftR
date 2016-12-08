@@ -1,36 +1,38 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_endswith.c                                      :+:      :+:    :+:   */
+/*   ft_strrev.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: mvanwyk <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2016/08/09 14:25:49 by mvanwyk           #+#    #+#             */
-/*   Updated: 2016/08/09 14:26:12 by mvanwyk          ###   ########.fr       */
+/*   Created: 2016/06/03 14:07:34 by mvanwyk           #+#    #+#             */
+/*   Updated: 2016/06/03 14:35:59 by mvanwyk          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
 /*
-**	Returns 1 if the c-string 'str' ends with the c-string 'start', otherwise
-**	0 is returned.
+**	Mallocs and returns a new c-string containing the characters of 'str' in
+**	reverse. If memory allocation fails, or 'str' is NULL or empty, NULL is
+**	returned.
 */
-int		ft_endswith(char const *str, char const *end)
+char	*ft_strrev(char const *str)
 {
 	int		cnt;
-	int		endlen;
 	int		stridx;
+	char	*rstr;
 
 	cnt = 0;
-	endlen = ft_strlen(end);
-	stridx = ft_strlen(str) - endlen;
-	while (str[stridx] != '\0' && end[cnt] != '\0' && cnt < endlen)
+	stridx = ft_strlen(str) - 1;
+	if ((rstr = (char *)malloc(sizeof(char) * stridx + 2)) == NULL)
+		return (NULL);
+	while (stridx >= 0)
 	{
-		if (str[stridx] != end[cnt])
-			return (0);
+		rstr[cnt] = str[stridx];
 		cnt++;
-		stridx++;
+		stridx--;
 	}
-	return (1);
+	rstr[cnt] = '\0';
+	return (rstr);
 }

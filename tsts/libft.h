@@ -94,9 +94,12 @@ t_list	*ft_lstmap(t_list *lst, t_list *(*f)(t_list *elem));
 /*
 **	Extra functions
 */
+int		ft_endswith(char const *str, char const *end);
 int		ft_indexof(char const *str, char c);
 int		ft_lindexof(char const *str, char c);
+void	ft_putnbr_endl(int n);
+int		ft_splitcnt(char const *s, char c);
 int		ft_startswith(char const *str, char const *start);
-int		ft_endswith(char const *str, char const *end);
+char	*ft_strrev(char const *str);
 
 #endif
