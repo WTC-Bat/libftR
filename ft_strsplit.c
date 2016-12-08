@@ -25,7 +25,7 @@ static int	word_count(char const *s, char c)
 			wcnt++;
 		cnt++;
 	}
-	return (wcnt);
+	return (wcnt + 1);
 }
 
 static char	*get_word(char const *s, int scnt, int start)
