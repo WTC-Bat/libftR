@@ -1,29 +1,19 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_startswith.c                                    :+:      :+:    :+:   */
+/*   ft_putnbr_endl.c                                   :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: mvanwyk <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2016/06/14 14:14:27 by mvanwyk           #+#    #+#             */
-/*   Updated: 2016/06/14 14:27:28 by mvanwyk          ###   ########.fr       */
+/*   Created: 2016/08/09 14:24:37 by mvanwyk           #+#    #+#             */
+/*   Updated: 2016/08/09 14:24:41 by mvanwyk          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int		ft_startswith(char *str, char *start)
+void	ft_putnbr_endl(int n)
 {
-	int		startlen;
-	int		cnt;
-
-	startlen = ft_strlen(start);
-	cnt = 0;
-	while (cnt < startlen)
-	{
-		if (str[cnt] != start[cnt])
-			return (0);
-		cnt++;
-	}
-	return (1);
+	ft_putnbr(n);
+	ft_putchar('\n');
 }

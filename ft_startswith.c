@@ -1,34 +1,35 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_indexof.c                                       :+:      :+:    :+:   */
+/*   ft_startswith.c                                    :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: mvanwyk <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2016/05/31 17:12:52 by mvanwyk           #+#    #+#             */
-/*   Updated: 2016/05/31 17:12:56 by mvanwyk          ###   ########.fr       */
+/*   Created: 2016/06/14 14:14:27 by mvanwyk           #+#    #+#             */
+/*   Updated: 2016/06/14 14:27:28 by mvanwyk          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
 /*
-**	Returns the index of the first occurence of the char 'c' in the c-string
-**	'str'. If 'str' is NULL or empty, or 'c' is '\0', -1 is returned.
+**	Returns 1 if the c-string 'str' begins with the c-string 'start', otherwise
+**	0 is returned.
 */
-int		ft_indexof(char const *str, char c)
+int		ft_startswith(char const *str, char const *start)
 {
+	int		startlen;
 	int		cnt;
 
-	if (str != NULL && str[0] != '\0' && c != '\0')
+	if (str == NULL || start == NULL)
+		return (0);
+	startlen = ft_strlen(start);
+	cnt = 0;
+	while (cnt < startlen && str[cnt] != '\0')
 	{
-		cnt = 0;
-		while (str[cnt] != '\0')
-		{
-			if (str[cnt] == c)
-				return (cnt);
-			cnt++;
-		}
+		if (str[cnt] != start[cnt])
+			return (0);
+		cnt++;
 	}
-	return (-1);
+	return (1);
 }
