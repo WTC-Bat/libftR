@@ -23,6 +23,8 @@ char	*ft_strrev(char const *str)
 	int		stridx;
 	char	*rstr;
 
+	if (str == NULL || str[0] == '\0')
+		return (NULL);
 	cnt = 0;
 	stridx = ft_strlen(str) - 1;
 	if ((rstr = (char *)malloc(sizeof(char) * stridx + 2)) == NULL)
