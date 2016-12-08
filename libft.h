@@ -103,5 +103,6 @@ int		ft_splitcnt(char const *s, char c);
 int		ft_startswith(char const *str, char const *start);
 char	*ft_strrev(char const *str);
 size_t	ft_wcslen(wchar_t const *wcs);
+int		ft_wordcnt(char const *str);
 
 #endif
