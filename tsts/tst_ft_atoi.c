@@ -12,6 +12,9 @@ int		main(void)
 	char	*s7 = "abc123";
 	char	*s8 = "-06050\t\v\f\r\n \f";
 	char	*s9 = "  06050\t\v\f\r\n \f \f\t\n\r  ";
+	char	*s10 = "+42";
+	char	*s11 = "\20042";
+	char	*s12 = "0001020304";
 	int		st1 = atoi(s1);
 	int		ft1 = ft_atoi(s1);
 	int		st2 = atoi(s2);
@@ -30,6 +33,12 @@ int		main(void)
 	int		ft8 = ft_atoi(s8);
 	int		st9 = atoi(s9);
 	int		ft9 = ft_atoi(s9);
+	int		st10 = atoi(s10);
+	int		ft10 = ft_atoi(s10);
+	int		st11 = atoi(s11);
+	int		ft11 = ft_atoi(s11);
+	int		st12 = atoi(s12);
+	int		ft12 = ft_atoi(s12);
 
 	ft_putstr("ST1: ");
 	ft_putnbr(st1);
@@ -84,6 +93,24 @@ int		main(void)
 	ft_putchar('\n');
 	ft_putstr("FT9: ");
 	ft_putnbr(ft9);
+	ft_putchar('\n');
+	ft_putstr("ST10: ");
+	ft_putnbr(st10);
+	ft_putchar('\n');
+	ft_putstr("FT10: ");
+	ft_putnbr(ft10);
+	ft_putchar('\n');
+	ft_putstr("ST11: ");
+	ft_putnbr(st11);
+	ft_putchar('\n');
+	ft_putstr("FT11: ");
+	ft_putnbr(ft11);
+	ft_putchar('\n');
+	ft_putstr("ST12: ");
+	ft_putnbr(st12);
+	ft_putchar('\n');
+	ft_putstr("FT12: ");
+	ft_putnbr(ft12);
 	ft_putchar('\n');
 	return (0);
 }

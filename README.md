@@ -17,6 +17,8 @@
 			-	Both work, but 42FileChecker says they don't. I think 42FC
 				 expects unsigned values or some such.
 
+		-	 Errors found with moulitest :(
+
 
 	-	Branches:
 		-	master:		all basic functions. Working.
