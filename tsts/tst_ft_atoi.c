@@ -15,6 +15,7 @@ int		main(void)
 	char	*s10 = "+42";
 	char	*s11 = "\20042";
 	char	*s12 = "0001020304";
+	char	*s13 = "+1234";
 	int		st1 = atoi(s1);
 	int		ft1 = ft_atoi(s1);
 	int		st2 = atoi(s2);
@@ -39,6 +40,8 @@ int		main(void)
 	int		ft11 = ft_atoi(s11);
 	int		st12 = atoi(s12);
 	int		ft12 = ft_atoi(s12);
+	int		st13 = atoi(s13);
+	int		ft13 = ft_atoi(s13);
 
 	ft_putstr("ST1: ");
 	ft_putnbr(st1);
@@ -111,6 +114,12 @@ int		main(void)
 	ft_putchar('\n');
 	ft_putstr("FT12: ");
 	ft_putnbr(ft12);
+	ft_putchar('\n');
+	ft_putstr("ST13: ");
+	ft_putnbr(st13);
+	ft_putchar('\n');
+	ft_putstr("FT13: ");
+	ft_putnbr(ft13);
 	ft_putchar('\n');
 	return (0);
 }

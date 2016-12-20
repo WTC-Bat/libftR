@@ -13,7 +13,7 @@
 			 most cases, this is a simple:
 			 if ('var' == NULL)
 			 	return (NULL);
-				
+
 		-	ft_toupper & ft_tolower
 			-	Both work, but 42FileChecker says they don't. I think 42FC
 				 expects unsigned values or some such.
@@ -26,3 +26,7 @@
 		-	bonus:		all basic and bonus functions. Working.
 		-	extra:		all basic and bonus functions with extra functions
 						 added. Working
+
+	-	Changes in 'extra' branch:
+		-	ft_toupper
+		-	ft_tolower
