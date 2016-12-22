@@ -25,7 +25,7 @@ static	int	get_start(char *s)
 	cnt = 0;
 	while (s[cnt] != '\0')
 	{
-		if (s[cnt] > 32 && s[cnt] < 127)
+		if ((ft_isascii(s[cnt]) == 1) && s[cnt] > 32 && s[cnt] < 127)
 			return (cnt);
 		cnt++;
 	}
@@ -50,11 +50,10 @@ int			ft_atoi(char *s)
 		is_signed = 1;
 		cnt++;
 	}
-	while (ft_isdigit(s[cnt]) == 1)
-	{
-		out_int = out_int * 10 + (s[cnt] - '0');
+	if (s[cnt] == '+')
 		cnt++;
-	}
+	while (ft_isdigit(s[cnt]) == 1)
+		out_int = out_int * 10 + (s[cnt++] - '0');
 	if (is_signed == 1)
 		out_int = -out_int;
 	return (out_int);

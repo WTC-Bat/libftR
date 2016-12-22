@@ -30,3 +30,6 @@
 	-	Changes in 'extra' branch:
 		-	ft_toupper
 		-	ft_tolower
+		-	ft_strrchr
+		-	ft_atoi
+		-	ft_strnstr (WIP)
