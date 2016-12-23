@@ -33,3 +33,4 @@
 		-	ft_strrchr
 		-	ft_atoi
 		-	ft_strnstr (WIP)
+		-	NORM'D
