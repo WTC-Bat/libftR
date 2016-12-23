@@ -27,6 +27,10 @@
 		-	extra:		all basic and bonus functions with extra functions
 						 added. Working
 
+
+	-	Something wrong with ft_lstmap?
+
+
 	-	Changes in 'extra' branch:
 		-	ft_toupper
 		-	ft_tolower
